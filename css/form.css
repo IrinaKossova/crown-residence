@@ -1,0 +1,158 @@
+.form {
+    background: var(--color-secondary);
+}
+
+.form__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-right: 161px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: fit-content;
+
+    padding: 75px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    background-color: #FFFFFF;
+}
+
+.form__heading {
+    font-family: var(--second-family);
+    font-size: 54px;
+    line-height: 110%;
+    color: #38535d;
+
+    padding-bottom: 45px;
+}
+
+.form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.form__input {
+    display: inline;
+    border: 2px solid #d5c9be;
+    border-radius: 4px;
+
+    padding: 14.5px;
+
+    color: var(--color-secondary);
+}
+
+.form__input::placeholder {
+    color: #55565a;
+    opacity: 0.7;
+}
+
+.form__policy {
+    font-size: 19px;
+    line-height: 130%;
+    color: #55565a;
+}
+
+.form__button {
+   padding: 32px 20px;
+   background: #282829;
+}
+
+.form__image-group {
+    position: relative;
+}
+
+.form__image--back {
+    position: absolute;
+
+    min-height: 100%;
+
+    object-position: right;
+    object-fit: cover;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;  
+}
+
+.form__image--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: -20%;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    transform: scaleX(-1);
+    background-image: url("/images/form_front.png");
+    background-size: cover;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@media (max-width: 1850px) {
+    .form__container{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+      .form__image--top {
+         left: 0%;
+      }
+}
+
+@media (max-width: 800px) {
+.form__image--top {
+   display: none;
+}
+ .form__heading {
+    text-align: center;
+    padding-bottom: 5px;
+ }
+
+ .form__group {
+    padding-top: 0;
+ }
+.form__group:before {
+    content: "";
+    display: block;
+    background-image: url("/images/form_front.png");
+    background-size: cover;
+    align-self: center;
+    
+    height: 100px;
+    width: 120px;
+}
+}
+
+@media (max-width: 700px) {
+    .form__image--back {
+        display: none;
+    }
+
+    .form__container {
+        grid-template-columns: 1fr;  
+    }
+
+    .form__group {
+      border-radius: 30px;  
+    }
+}
+
+@media (max-width: 500px) {
+    .form__container {
+        margin: 5px;
+    }
+       
+    .form__group {
+      padding: 20px;  
+    }
+
+}

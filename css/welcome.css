@@ -1,0 +1,154 @@
+.welcome__section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background: var(--color-primary);
+    height: 100%;
+}
+
+.welcome__text {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    gap: 95px;
+}
+
+.welcome__container {
+    display: grid;
+    grid-template-rows: auto;
+    align-items: end;
+    justify-content: flex-end;
+    row-gap: 50px;
+    width: 50%;
+    padding-top: 60px;
+}
+
+.welcome__subtitle {
+    font-family: var(--second-family);
+    font-size: var(--size-80px);
+    line-height: 120%;
+}
+
+.welcome__description {
+    font-size: var(--size-50px);
+    line-height: 120%;
+}
+
+.welcome__features {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 35px;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.welcome__features-item {
+  background: rgba(40, 40, 41, 0.7);
+}
+
+.welcome__features-item::before {
+    content: url("/images/tick.svg");
+    display: inline-block;
+    width: 39px;
+    height: 37px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.welcome__features-number {
+    font-family: var(--second-family);
+    font-size: var(--size-40px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    background: rgba(40, 40, 41, 0.7);
+    line-height: 150%;
+}
+
+.welcome__button {
+    display: inline-block;
+    padding: 40px 50px;
+    width: fit-content;
+
+    background-color: white;
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.welcome__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1850px) {
+.welcome__container {
+    width: 100%;
+    justify-content: center;
+}
+}
+
+
+@media (max-width: 1350px) {
+    .welcome__section {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .welcome__section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/welcome.jpg);
+        background-size: cover;
+        opacity: 0.2;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .welcome__image {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .welcome__button {
+        padding: 15px 25px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 577px) {
+    .welcome__container {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome__text {
+        gap: 10px;
+    }
+
+    .welcome__container {
+        row-gap: 10px;
+        text-align: center;
+    }
+
+    .welcome__text {
+        row-gap: 5px;
+    }
+
+    .welcome__features {
+        row-gap: 15px;
+    }
+
+    .welcome__button {
+        justify-self: center;
+    }
+}

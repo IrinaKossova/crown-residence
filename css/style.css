@@ -1,0 +1,15 @@
+/* Шрифты */
+@import url('fonts.css');
+
+/* Сброс стилей */
+@import url('reset.css');
+
+/* Общие стили */
+@import url('body.css');
+
+/* Компоненты */
+@import url('header.css');
+@import url('welcome.css');
+@import url('benefits.css');
+@import url('form.css');
+@import url('footer.css');

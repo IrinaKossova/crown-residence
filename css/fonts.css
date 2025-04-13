@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/Arial-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Prata';
+    src: url('../fonts/Prata-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/Arial-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/Arial-Italic.ttf') format('truetype');
+    font-style: italic;
+}
